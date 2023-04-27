@@ -1,38 +1,95 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform:translateX(20);
+}
+
+.documentary--container{
+  display:flex;
+  width: 800px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  /* background-color: gray; */
+  border-end-end-radius: 50px;
+  border-top-left-radius: 50px;
+  margin: 40px;
+ 
+}
+.video--desription{
+padding:20px;
+}
+a{
+  color:black;
+}
+.documentary-container-header{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.react-icons{
+  padding-top: 25px;
+  padding-left: 50px;
+}
+.search-box{
+  outline: none;
+  border: 1px thick grey;
+  padding: .4rem 1rem;
+  font-size: 1rem;
+  border-radius: .5rem;
+  width: 30%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* LIKEBUTTON ICON */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.heart,
+.heart-clicked {
+   border: 1px solid red;
+   border-top: none;
+   border-right: none;
+   display: inline-block;
+   height: 30px;
+   margin: 0 10px;
+   position: relative;
+   top: 30px;
+   left:20px;
+   transform: rotate(-45deg);
+   width: 30px;
 }
-
-.App-link {
-  color: #61dafb;
+.heart-clicked {
+   background-color: red;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heart:before,
+.heart:after,
+.heart-clicked:before,
+.heart-clicked:after {
+   content: "";
+   border: 1px solid red;
+   border-radius: 50%;
+   height: 30px;
+   position: absolute;
+   width: 30px;
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+}
+.heart-clicked:before,
+.heart-clicked:after {
+   background-color: red;
+}
+.heart:before,
+.heart-clicked:before {
+   top: -15px;
+   left: 0;
+   border-bottom: none;
+   border-left: none;
+   transform: rotate(-45deg);
+}
+.heart:after,
+.heart-clicked:after {
+   left: 15px;
+   top: 0;
+   border-bottom: none;
+   border-left: none;
+   transform: rotate(45deg);
 }
